@@ -12,6 +12,7 @@
 		833B68472AD98958007B8698 /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
 		833B68482AD98958007B8698 /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684C2AD9B87C007B8698 /* UserAuthentication.swift */; };
+		833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */; };
 		835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */; };
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
 		835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */; };
@@ -47,6 +48,7 @@
 		833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PWNetworkingKit.xcframework; path = ../PWNetworkingKit/build/PWNetworkingKit.xcframework; sourceTree = "<group>"; };
 		833B68462AD98958007B8698 /* PWKeychainKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PWKeychainKit.xcframework; path = ../PWKeychainKit/build/PWKeychainKit.xcframework; sourceTree = "<group>"; };
 		833B684C2AD9B87C007B8698 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
+		833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedService.swift; sourceTree = "<group>"; };
 		835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWApiWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835EE1B72AD97E98005E2E24 /* PWApiWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWApiWorker.h; sourceTree = "<group>"; };
 		835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWApiWorker.docc; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		833B684E2AD9BC5A007B8698 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		835EE1AA2AD97E98005E2E24 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		835EE1B62AD97E98005E2E24 /* PWApiWorker */ = {
 			isa = PBXGroup;
 			children = (
+				833B684E2AD9BC5A007B8698 /* Protocols */,
 				833B684B2AD9B870007B8698 /* Model */,
 				835EE1B72AD97E98005E2E24 /* PWApiWorker.h */,
 				835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */,
@@ -241,6 +252,7 @@
 			files = (
 				833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */,
 				835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */,
+				833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
