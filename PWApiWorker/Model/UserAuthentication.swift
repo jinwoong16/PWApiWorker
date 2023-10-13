@@ -8,15 +8,17 @@
 import Foundation
 
 /// An object where user information on the API server is located.
-public struct UserAuthentication {
+public protocol UserAuthentication {
     /// A user id from the api server.
-    var userId: String
+    var userId: String { get }
     
     /// A user secret from the api server.
-    var userSecret: String
-    
+    var userSecret: String { get }
+}
+
+extension UserAuthentication {
     /// An encrypted string based on base64 encoding.
-    var encryptedString: String? {
+    public var encryptedString: String? {
         String(
             format: "%@:%@",
             userId,
