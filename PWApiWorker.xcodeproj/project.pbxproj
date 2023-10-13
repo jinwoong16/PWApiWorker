@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; };
+		833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		833B68472AD98958007B8698 /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
+		833B68482AD98958007B8698 /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */; };
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
 		835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */; };
@@ -23,7 +27,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		833B68452AD98949007B8698 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */,
+				833B68482AD98958007B8698 /* PWKeychainKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PWNetworkingKit.xcframework; path = ../PWNetworkingKit/build/PWNetworkingKit.xcframework; sourceTree = "<group>"; };
+		833B68462AD98958007B8698 /* PWKeychainKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PWKeychainKit.xcframework; path = ../PWKeychainKit/build/PWKeychainKit.xcframework; sourceTree = "<group>"; };
 		835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWApiWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835EE1B72AD97E98005E2E24 /* PWApiWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWApiWorker.h; sourceTree = "<group>"; };
 		835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWApiWorker.docc; sourceTree = "<group>"; };
@@ -36,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */,
+				833B68472AD98958007B8698 /* PWKeychainKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		833B68412AD98949007B8698 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				833B68462AD98958007B8698 /* PWKeychainKit.xcframework */,
+				833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		835EE1AA2AD97E98005E2E24 = {
 			isa = PBXGroup;
 			children = (
 				835EE1B62AD97E98005E2E24 /* PWApiWorker */,
 				835EE1C22AD97E98005E2E24 /* PWApiWorkerTests */,
 				835EE1B52AD97E98005E2E24 /* Products */,
+				833B68412AD98949007B8698 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +140,7 @@
 				835EE1B02AD97E98005E2E24 /* Sources */,
 				835EE1B12AD97E98005E2E24 /* Frameworks */,
 				835EE1B22AD97E98005E2E24 /* Resources */,
+				833B68452AD98949007B8698 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
