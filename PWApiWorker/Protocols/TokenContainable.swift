@@ -9,4 +9,5 @@ import Foundation
 
 public protocol TokenContainable: Decodable {
     var accessToken: String { get }
+    var expireAt: String { get }
 }
