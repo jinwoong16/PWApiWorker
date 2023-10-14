@@ -14,13 +14,14 @@ public protocol AuthenticatedService: APIService {
 }
 
 public extension AuthenticatedService {
+    @discardableResult
     func requireAccess<R: TokenContainable, E: Requestable & Responsable>(
         with endpoint: E,
         serviceName: String
     ) async throws -> UserToken where E.Response == R {
         let result = try await request(with: endpoint)
-        let userToken = UserToken(service: serviceName, token: result.accessToken)
-        _ = try keychainHelper.save(item: userToken)
+        let userToken = UserToken(service: serviceName, token: result.accessToken, expireAt: result.expireAt)
+        try keychainHelper.save(item: userToken, service: serviceName)
         
         return userToken
     }
