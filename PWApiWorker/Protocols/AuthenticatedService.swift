@@ -11,7 +11,18 @@ import PWKeychainKit
 
 public protocol AuthenticatedService: APIService {
     var keychainHelper: KeychainHelper { get }
-    var userAuth: UserAuthentication { get }
-    
-    func authenticate() throws
+}
+
+public extension AuthenticatedService {
+    @discardableResult
+    func requireAccess<R: TokenContainable, E: Requestable & Responsable>(
+        with endpoint: E,
+        serviceName: String
+    ) async throws -> UserToken where E.Response == R {
+        let result = try await request(with: endpoint)
+        let userToken = UserToken(service: serviceName, token: result.accessToken, expireAt: result.expireAt)
+        try keychainHelper.save(item: userToken, service: serviceName)
+        
+        return userToken
+    }
 }

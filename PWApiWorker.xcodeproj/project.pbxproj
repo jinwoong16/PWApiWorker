@@ -15,8 +15,13 @@
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
 		835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */; };
 		835EE1C52AD97E98005E2E24 /* PWApiWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 835EE1B72AD97E98005E2E24 /* PWApiWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		838F7BC62ADA6F7000E80F0D /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
-		838F7BC72ADA6F7000E80F0D /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		837352BF2ADA72BD0012A783 /* VitoTokenBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352BE2ADA72BD0012A783 /* VitoTokenBody.swift */; };
+		837352C32ADA98340012A783 /* TokenContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352C22ADA98340012A783 /* TokenContainable.swift */; };
+		837352C62ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352C52ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift */; };
+		837352C92ADAA4950012A783 /* VITOApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352C82ADAA4950012A783 /* VITOApiService.swift */; };
+		837352CC2ADAA6190012A783 /* VITOServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352CB2ADAA6190012A783 /* VITOServiceError.swift */; };
+		837352D22ADAC69F0012A783 /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
+		837352D32ADAC69F0012A783 /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */,
-				838F7BC72ADA6F7000E80F0D /* PWKeychainKit.xcframework in Embed Frameworks */,
+				837352D32ADAC69F0012A783 /* PWKeychainKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +59,11 @@
 		835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWApiWorker.docc; sourceTree = "<group>"; };
 		835EE1BE2AD97E98005E2E24 /* PWApiWorkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PWApiWorkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWApiWorkerTests.swift; sourceTree = "<group>"; };
+		837352BE2ADA72BD0012A783 /* VitoTokenBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitoTokenBody.swift; sourceTree = "<group>"; };
+		837352C22ADA98340012A783 /* TokenContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenContainable.swift; sourceTree = "<group>"; };
+		837352C52ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedAudioAPIService.swift; sourceTree = "<group>"; };
+		837352C82ADAA4950012A783 /* VITOApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITOApiService.swift; sourceTree = "<group>"; };
+		837352CB2ADAA6190012A783 /* VITOServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITOServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */,
-				838F7BC62ADA6F7000E80F0D /* PWKeychainKit.xcframework in Frameworks */,
+				837352D22ADAC69F0012A783 /* PWKeychainKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +99,9 @@
 		833B684B2AD9B870007B8698 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				833B684C2AD9B87C007B8698 /* UserAuthentication.swift */,
+				837352CA2ADAA60E0012A783 /* Error */,
+				837352C42ADA9DED0012A783 /* Authenticate */,
+				837352C02ADA772B0012A783 /* VitoApi */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */,
+				837352C22ADA98340012A783 /* TokenContainable.swift */,
+				837352C52ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -124,6 +138,7 @@
 		835EE1B62AD97E98005E2E24 /* PWApiWorker */ = {
 			isa = PBXGroup;
 			children = (
+				837352C72ADAA4880012A783 /* NetworkService */,
 				833B684E2AD9BC5A007B8698 /* Protocols */,
 				833B684B2AD9B870007B8698 /* Model */,
 				835EE1B72AD97E98005E2E24 /* PWApiWorker.h */,
@@ -138,6 +153,38 @@
 				835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */,
 			);
 			path = PWApiWorkerTests;
+			sourceTree = "<group>";
+		};
+		837352C02ADA772B0012A783 /* VitoApi */ = {
+			isa = PBXGroup;
+			children = (
+				837352BE2ADA72BD0012A783 /* VitoTokenBody.swift */,
+			);
+			path = VitoApi;
+			sourceTree = "<group>";
+		};
+		837352C42ADA9DED0012A783 /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+				833B684C2AD9B87C007B8698 /* UserAuthentication.swift */,
+			);
+			path = Authenticate;
+			sourceTree = "<group>";
+		};
+		837352C72ADAA4880012A783 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				837352C82ADAA4950012A783 /* VITOApiService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		837352CA2ADAA60E0012A783 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				837352CB2ADAA6190012A783 /* VITOServiceError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837352C92ADAA4950012A783 /* VITOApiService.swift in Sources */,
 				833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */,
+				837352BF2ADA72BD0012A783 /* VitoTokenBody.swift in Sources */,
 				835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */,
+				837352C32ADA98340012A783 /* TokenContainable.swift in Sources */,
 				833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */,
+				837352CC2ADAA6190012A783 /* VITOServiceError.swift in Sources */,
+				837352C62ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
