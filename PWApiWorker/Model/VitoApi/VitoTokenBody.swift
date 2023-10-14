@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct VitoTokenBody: Decodable {
+struct VitoTokenBody: TokenContainable {
     var accessToken: String
     var expireAt: String
     
