@@ -13,5 +13,7 @@ public protocol AuthenticatedService: APIService {
     var keychainHelper: KeychainHelper { get }
     var userAuth: UserAuthentication { get }
     
-    func authenticate() throws
+    func requireAccess<R: Decodable, E: Requestable & Responsable>(
+        with endpoint: E
+    ) async throws -> UserToken where E.Response == R
 }
