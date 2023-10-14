@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; };
 		833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		833B68472AD98958007B8698 /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
-		833B68482AD98958007B8698 /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684C2AD9B87C007B8698 /* UserAuthentication.swift */; };
 		833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */; };
 		835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */; };
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
 		835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */; };
 		835EE1C52AD97E98005E2E24 /* PWApiWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 835EE1B72AD97E98005E2E24 /* PWApiWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		838F7BC62ADA6F7000E80F0D /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
+		838F7BC72ADA6F7000E80F0D /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */,
-				833B68482AD98958007B8698 /* PWKeychainKit.xcframework in Embed Frameworks */,
+				838F7BC72ADA6F7000E80F0D /* PWKeychainKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */,
-				833B68472AD98958007B8698 /* PWKeychainKit.xcframework in Frameworks */,
+				838F7BC62ADA6F7000E80F0D /* PWKeychainKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
