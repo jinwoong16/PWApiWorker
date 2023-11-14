@@ -16,6 +16,7 @@
 		8345086E2B0344A8003FF6AB /* MultipartFormDataComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345086D2B0344A8003FF6AB /* MultipartFormDataComponent.swift */; };
 		834508702B0344BD003FF6AB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345086F2B0344BD003FF6AB /* String+.swift */; };
 		834508722B0344E1003FF6AB /* MultipartFormDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834508712B0344E1003FF6AB /* MultipartFormDataBuilder.swift */; };
+		834508742B034538003FF6AB /* VitoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834508732B034538003FF6AB /* VitoObject.swift */; };
 		835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */; };
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
 		835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */; };
@@ -64,6 +65,7 @@
 		8345086D2B0344A8003FF6AB /* MultipartFormDataComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataComponent.swift; sourceTree = "<group>"; };
 		8345086F2B0344BD003FF6AB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		834508712B0344E1003FF6AB /* MultipartFormDataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataBuilder.swift; sourceTree = "<group>"; };
+		834508732B034538003FF6AB /* VitoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitoObject.swift; sourceTree = "<group>"; };
 		835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWApiWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835EE1B72AD97E98005E2E24 /* PWApiWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWApiWorker.h; sourceTree = "<group>"; };
 		835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWApiWorker.docc; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				837352BE2ADA72BD0012A783 /* VitoTokenBody.swift */,
 				834508682B03441E003FF6AB /* VitoResponse.swift */,
+				834508732B034538003FF6AB /* VitoObject.swift */,
 			);
 			path = VitoApi;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */,
 				834508692B03441E003FF6AB /* VitoResponse.swift in Sources */,
 				837352C32ADA98340012A783 /* TokenContainable.swift in Sources */,
+				834508742B034538003FF6AB /* VitoObject.swift in Sources */,
 				833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */,
 				837352CC2ADAA6190012A783 /* VITOServiceError.swift in Sources */,
 				837352C62ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift in Sources */,
