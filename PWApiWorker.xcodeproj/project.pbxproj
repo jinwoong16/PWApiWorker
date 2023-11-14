@@ -11,6 +11,7 @@
 		833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684C2AD9B87C007B8698 /* UserAuthentication.swift */; };
 		833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */; };
+		834508692B03441E003FF6AB /* VitoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834508682B03441E003FF6AB /* VitoResponse.swift */; };
 		835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */; };
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
 		835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */; };
@@ -54,6 +55,7 @@
 		833B68462AD98958007B8698 /* PWKeychainKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PWKeychainKit.xcframework; path = ../PWKeychainKit/build/PWKeychainKit.xcframework; sourceTree = "<group>"; };
 		833B684C2AD9B87C007B8698 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedService.swift; sourceTree = "<group>"; };
+		834508682B03441E003FF6AB /* VitoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitoResponse.swift; sourceTree = "<group>"; };
 		835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWApiWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835EE1B72AD97E98005E2E24 /* PWApiWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWApiWorker.h; sourceTree = "<group>"; };
 		835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWApiWorker.docc; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				837352BE2ADA72BD0012A783 /* VitoTokenBody.swift */,
+				834508682B03441E003FF6AB /* VitoResponse.swift */,
 			);
 			path = VitoApi;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */,
 				837352BF2ADA72BD0012A783 /* VitoTokenBody.swift in Sources */,
 				835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */,
+				834508692B03441E003FF6AB /* VitoResponse.swift in Sources */,
 				837352C32ADA98340012A783 /* TokenContainable.swift in Sources */,
 				833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */,
 				837352CC2ADAA6190012A783 /* VITOServiceError.swift in Sources */,
