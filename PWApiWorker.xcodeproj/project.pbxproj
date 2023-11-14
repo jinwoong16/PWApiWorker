@@ -100,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				837352CA2ADAA60E0012A783 /* Error */,
-				837352C42ADA9DED0012A783 /* Authenticate */,
 				837352C02ADA772B0012A783 /* VitoApi */,
 			);
 			path = Model;
@@ -109,11 +108,36 @@
 		833B684E2AD9BC5A007B8698 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */,
-				837352C22ADA98340012A783 /* TokenContainable.swift */,
-				837352C52ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift */,
+				834508672B0343A2003FF6AB /* Response */,
+				834508662B03439E003FF6AB /* Request */,
+				834508652B03439A003FF6AB /* Network */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		834508652B03439A003FF6AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				837352C52ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift */,
+				833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		834508662B03439E003FF6AB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				833B684C2AD9B87C007B8698 /* UserAuthentication.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		834508672B0343A2003FF6AB /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				837352C22ADA98340012A783 /* TokenContainable.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		835EE1AA2AD97E98005E2E24 = {
@@ -161,14 +185,6 @@
 				837352BE2ADA72BD0012A783 /* VitoTokenBody.swift */,
 			);
 			path = VitoApi;
-			sourceTree = "<group>";
-		};
-		837352C42ADA9DED0012A783 /* Authenticate */ = {
-			isa = PBXGroup;
-			children = (
-				833B684C2AD9B87C007B8698 /* UserAuthentication.swift */,
-			);
-			path = Authenticate;
 			sourceTree = "<group>";
 		};
 		837352C72ADAA4880012A783 /* NetworkService */ = {
