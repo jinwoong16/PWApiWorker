@@ -121,7 +121,11 @@ private extension VITOApiService {
     }
     
     func isValidToken(target: UserToken) -> Bool {
-        return target.expireAt > Date().timeIntervalSince1970.description
+        if let targetInterval = TimeInterval(target.expireAt) {
+            return Date(timeIntervalSince1970: targetInterval) > Date()
+        } else {
+            return false
+        }
     }
     
     func requireAccess() async throws -> UserToken {
