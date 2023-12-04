@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; };
-		833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684C2AD9B87C007B8698 /* UserAuthentication.swift */; };
 		833B68502AD9BC6A007B8698 /* AuthenticatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */; };
 		834508692B03441E003FF6AB /* VitoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834508682B03441E003FF6AB /* VitoResponse.swift */; };
 		8345086B2B03446B003FF6AB /* Pollingable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345086A2B03446B003FF6AB /* Pollingable.swift */; };
-		8345086E2B0344A8003FF6AB /* MultipartFormDataComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345086D2B0344A8003FF6AB /* MultipartFormDataComponent.swift */; };
 		834508702B0344BD003FF6AB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345086F2B0344BD003FF6AB /* String+.swift */; };
-		834508722B0344E1003FF6AB /* MultipartFormDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834508712B0344E1003FF6AB /* MultipartFormDataBuilder.swift */; };
 		834508742B034538003FF6AB /* VitoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834508732B034538003FF6AB /* VitoObject.swift */; };
 		835EE1B92AD97E98005E2E24 /* PWApiWorker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835EE1B82AD97E98005E2E24 /* PWApiWorker.docc */; };
 		835EE1BF2AD97E98005E2E24 /* PWApiWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */; };
@@ -28,6 +24,8 @@
 		837352CC2ADAA6190012A783 /* VITOServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352CB2ADAA6190012A783 /* VITOServiceError.swift */; };
 		837352D22ADAC69F0012A783 /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
 		837352D32ADAC69F0012A783 /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83E9233B2B0DE57A00C4CF7B /* PWNetworkingKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; };
+		83E9233C2B0DE57A00C4CF7B /* PWNetworkingKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +45,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				833B68442AD98949007B8698 /* PWNetworkingKit.xcframework in Embed Frameworks */,
 				837352D32ADAC69F0012A783 /* PWKeychainKit.xcframework in Embed Frameworks */,
+				83E9233C2B0DE57A00C4CF7B /* PWNetworkingKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,9 +60,7 @@
 		833B684F2AD9BC6A007B8698 /* AuthenticatedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedService.swift; sourceTree = "<group>"; };
 		834508682B03441E003FF6AB /* VitoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitoResponse.swift; sourceTree = "<group>"; };
 		8345086A2B03446B003FF6AB /* Pollingable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pollingable.swift; sourceTree = "<group>"; };
-		8345086D2B0344A8003FF6AB /* MultipartFormDataComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataComponent.swift; sourceTree = "<group>"; };
 		8345086F2B0344BD003FF6AB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		834508712B0344E1003FF6AB /* MultipartFormDataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataBuilder.swift; sourceTree = "<group>"; };
 		834508732B034538003FF6AB /* VitoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitoObject.swift; sourceTree = "<group>"; };
 		835EE1B42AD97E98005E2E24 /* PWApiWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWApiWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835EE1B72AD97E98005E2E24 /* PWApiWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWApiWorker.h; sourceTree = "<group>"; };
@@ -83,8 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				833B68432AD98949007B8698 /* PWNetworkingKit.xcframework in Frameworks */,
 				837352D22ADAC69F0012A783 /* PWKeychainKit.xcframework in Frameworks */,
+				83E9233B2B0DE57A00C4CF7B /* PWNetworkingKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,9 +152,7 @@
 		8345086C2B034498003FF6AB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8345086D2B0344A8003FF6AB /* MultipartFormDataComponent.swift */,
 				8345086F2B0344BD003FF6AB /* String+.swift */,
-				834508712B0344E1003FF6AB /* MultipartFormDataBuilder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -339,8 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8345086E2B0344A8003FF6AB /* MultipartFormDataComponent.swift in Sources */,
-				834508722B0344E1003FF6AB /* MultipartFormDataBuilder.swift in Sources */,
 				837352C92ADAA4950012A783 /* VITOApiService.swift in Sources */,
 				833B684D2AD9B87C007B8698 /* UserAuthentication.swift in Sources */,
 				837352BF2ADA72BD0012A783 /* VitoTokenBody.swift in Sources */,
