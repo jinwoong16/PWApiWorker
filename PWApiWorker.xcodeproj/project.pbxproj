@@ -24,6 +24,10 @@
 		837352CC2ADAA6190012A783 /* VITOServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352CB2ADAA6190012A783 /* VITOServiceError.swift */; };
 		837352D22ADAC69F0012A783 /* PWKeychainKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; };
 		837352D32ADAC69F0012A783 /* PWKeychainKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68462AD98958007B8698 /* PWKeychainKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83B392A92B203E3700D78B68 /* KeychainHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B392A82B203E3700D78B68 /* KeychainHelperMock.swift */; };
+		83B392AB2B203E6D00D78B68 /* VITOApiServiceRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B392AA2B203E6D00D78B68 /* VITOApiServiceRequestTests.swift */; };
+		83B392AF2B203EC600D78B68 /* last.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 83B392AE2B203EC600D78B68 /* last.m4a */; };
+		83B392B12B203F4100D78B68 /* VITOObjectMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B392B02B203F4100D78B68 /* VITOObjectMock.swift */; };
 		83E9233B2B0DE57A00C4CF7B /* PWNetworkingKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; };
 		83E9233C2B0DE57A00C4CF7B /* PWNetworkingKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833B68422AD98949007B8698 /* PWNetworkingKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -72,6 +76,10 @@
 		837352C52ADAA41D0012A783 /* AuthenticatedAudioAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedAudioAPIService.swift; sourceTree = "<group>"; };
 		837352C82ADAA4950012A783 /* VITOApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITOApiService.swift; sourceTree = "<group>"; };
 		837352CB2ADAA6190012A783 /* VITOServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITOServiceError.swift; sourceTree = "<group>"; };
+		83B392A82B203E3700D78B68 /* KeychainHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelperMock.swift; sourceTree = "<group>"; };
+		83B392AA2B203E6D00D78B68 /* VITOApiServiceRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITOApiServiceRequestTests.swift; sourceTree = "<group>"; };
+		83B392AE2B203EC600D78B68 /* last.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = last.m4a; sourceTree = "<group>"; };
+		83B392B02B203F4100D78B68 /* VITOObjectMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITOObjectMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,8 @@
 		835EE1C22AD97E98005E2E24 /* PWApiWorkerTests */ = {
 			isa = PBXGroup;
 			children = (
+				83B392AD2B203EAA00D78B68 /* Resources */,
+				83B392A62B203E1900D78B68 /* VITOApiServiceTests */,
 				835EE1C32AD97E98005E2E24 /* PWApiWorkerTests.swift */,
 			);
 			path = PWApiWorkerTests;
@@ -221,6 +231,32 @@
 				837352CB2ADAA6190012A783 /* VITOServiceError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		83B392A62B203E1900D78B68 /* VITOApiServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				83B392AA2B203E6D00D78B68 /* VITOApiServiceRequestTests.swift */,
+				83B392AC2B203E7000D78B68 /* Mock */,
+			);
+			path = VITOApiServiceTests;
+			sourceTree = "<group>";
+		};
+		83B392AC2B203E7000D78B68 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				83B392A82B203E3700D78B68 /* KeychainHelperMock.swift */,
+				83B392B02B203F4100D78B68 /* VITOObjectMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		83B392AD2B203EAA00D78B68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83B392AE2B203EC600D78B68 /* last.m4a */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B392AF2B203EC600D78B68 /* last.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +390,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				835EE1C42AD97E98005E2E24 /* PWApiWorkerTests.swift in Sources */,
+				83B392AB2B203E6D00D78B68 /* VITOApiServiceRequestTests.swift in Sources */,
+				83B392B12B203F4100D78B68 /* VITOObjectMock.swift in Sources */,
+				83B392A92B203E3700D78B68 /* KeychainHelperMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
