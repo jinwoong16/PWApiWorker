@@ -29,7 +29,6 @@ public final class VITOApiService: AuthenticatedAudioAPIService, Pollingable {
         self.session = session
     }
     
-    // TODO: Request with audio and polling.
     /// How to request with audio url?
     /// 1. request with audio url
     /// 2. check the token.
@@ -54,16 +53,7 @@ public final class VITOApiService: AuthenticatedAudioAPIService, Pollingable {
             // 3.
             let boundary = UUID().uuidString
             let audioData = try transform(audio: audioURL)
-            let bodyData = createMultipartFormData(boundary: boundary) {
-                MultipartFormDataComponent.file(
-                    name: "file",
-                    filename: "audio.p4a",
-                    data: audioData
-                )
-                MultipartFormDataComponent.text(name: "config", value: "{}")
-            }
-            
-            let endpoint: Endpoint<VitoResponse> = buildEndpoint(
+            let endpoint: Endpoint<VitoResponse> = .init(
                 baseURL: baseURL,
                 path: transcribePath,
                 method: .POST,
@@ -72,15 +62,22 @@ public final class VITOApiService: AuthenticatedAudioAPIService, Pollingable {
                     .contentType(.multipartForm(boundary: boundary)),
                     .accept(.json)
                 ],
-                body: bodyData
-            )
+                boundary: boundary
+            ) {
+                MultipartFormDataComponent.file(
+                    name: "file",
+                    filename: "audio.m4a",
+                    data: audioData
+                )
+                MultipartFormDataComponent.text(name: "config", value: "{}")
+            }
             
             // 4.
             let response = try await request(with: endpoint)
             let transcribeId = response.id
-
+            
             // 5.
-            let resultEndpoint: Endpoint<VitoTranscribeResponse> = buildEndpoint(
+            let resultEndpoint: Endpoint<VitoTranscribeResponse> = .init(
                 baseURL: baseURL,
                 path: "\(transcribePath)/\(transcribeId)",
                 method: .GET,
@@ -90,7 +87,10 @@ public final class VITOApiService: AuthenticatedAudioAPIService, Pollingable {
                 ]
             )
             
-            let transcribedData:Results = try await poll(interval: 5.0, timeout: 60.0, operation: { [weak self] in
+            let transcribedData: Results = try await poll(
+                interval: 5.0,
+                timeout: 60.0
+            ) { [weak self] in
                 let response = try await self?.request(with: resultEndpoint)
                 if let response = response,
                    let results = response.results {
@@ -98,14 +98,12 @@ public final class VITOApiService: AuthenticatedAudioAPIService, Pollingable {
                 } else {
                     return nil
                 }
-            })
+            }
             
             return transcribedData
                 .utterances
                 .map { $0.msg }
                 .joined(separator: " ")
-            
-            
         } catch {
             print(error)
             return "Empty by error"
@@ -122,24 +120,16 @@ private extension VITOApiService {
         return data
     }
     
-    func buildEndpoint<R: Decodable>(
-        baseURL: String,
-        path: String,
-        method: HttpMethod,
-        headers: [HttpHeader]? = nil,
-        body: Data? = nil
-    ) -> Endpoint<R> {
-        Endpoint<R>(baseURL: baseURL, path: path, method: method, headers: headers, body: body)
+    func isValidToken(target: UserToken) -> Bool {
+        if let targetInterval = TimeInterval(target.expireAt) {
+            return Date(timeIntervalSince1970: targetInterval) > Date()
+        } else {
+            return false
+        }
     }
     
-    func isValidToken(target: UserToken) -> Bool {
-        return target.expireAt > Date().timeIntervalSince1970.description
-    }
-
     func requireAccess() async throws -> UserToken {
-        let body = "client_id=\(userAuth.userId)&client_secret=\(userAuth.userSecret)".toData()
-        
-        let endpoint: Endpoint<VitoTokenBody> = buildEndpoint(
+        let endpoint: Endpoint<VitoTokenBody> = .init(
             baseURL: baseURL,
             path: authPath,
             method: .POST,
@@ -147,38 +137,12 @@ private extension VITOApiService {
                 .accept(.json),
                 .contentType(.urlencoded)
             ],
-            body: body
+            body: [
+                "client_id": userAuth.userId,
+                "client_secret": userAuth.userSecret
+            ]
         )
         
         return try await requireAccess(with: endpoint, serviceName: serviceName)
-    }
-}
-
-private extension VITOApiService {
-    func createMultipartFormData(
-        boundary: String,
-        @MultipartFormDataBuilder body: () -> [MultipartFormDataComponent]
-    ) -> Data {
-        let components = body()
-        let boundary = "Boundary-\(boundary)"
-        var formData = Data()
-        
-        for component in components {
-            formData.append("\(boundary)\r\n".toData())
-            
-            switch component {
-                case .text(let name, let value):
-                    formData.append("Content-Disposition: form-data; name=\"\(name)\"\r\n\r\n".toData())
-                    formData.append("\(value)\r\n".toData())
-                case .file(let name, let filename, let data):
-                    formData.append("Content-Disposition: form-data; name=\"\(name)\"; filename=\"\(filename)\"\r\n".toData())
-                    formData.append("Content-Type: application/octet-stream\r\n\r\n".toData())
-                    formData.append(data)
-                    formData.append("\r\n".toData())
-            }
-        }
-        formData.append("\(boundary)--\r\n".toData())
-        
-        return formData
     }
 }

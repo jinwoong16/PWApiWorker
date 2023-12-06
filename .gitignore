@@ -132,3 +132,5 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,swift
+PWApiWorkerTests/Resources/last.m4a
+PWApiWorkerTests/VITOApiServiceTests/Mock/VITOObjectMock.swift
